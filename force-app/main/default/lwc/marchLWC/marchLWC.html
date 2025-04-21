@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Cold Accounts">
+      <div if:true={myAccounts}>
+         <template for:each={myaccounts} for:item="acc">
+            {acc.Name} is of {acc.Industry}.</br>
+         </template>   
+      </div>
+      <div if:true={myError}>
+Oops, some error ocuured!
+      </div>  
+    </lightning-card>
+</template>

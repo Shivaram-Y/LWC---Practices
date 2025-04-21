@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title=" Fetching Accounds Records - Imperative">
+       <!-- <lightning-button variant="brand" label="Click to Show Records"  onclick={getAccounts}></lightning-button> --> 
+        
+        <template if:true ={toggleText} >
+            <h2> Hi, Thanks for the click on Toggle</h2>
+            <lightning-datatable
+                key-field="id"
+                data={dataList}
+                columns={columnsList}
+                show-row-number-column>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

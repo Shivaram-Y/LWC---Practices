@@ -1,0 +1,32 @@
+<template>
+ <lightning-card title="My LWC Component">
+    <div class = "slds-var-m-around_medium">
+    <h2> Hello Trailblazer </h2> 
+    </div>  
+
+    <div class = "slds-var-m-around_medium">
+        <h2> {message}</h2>
+    </div>
+
+    <div class = "slds-var-m-around_medium">
+        <h2>Hi GM!, {greetings}</h2>
+       <lightning-input label="Enter Input" onchange={handleChange}> </lightning-input>
+    </div>
+        <div class = "slds-var-m-around_medium">
+            <lightning-button variant = "brand" label="Click to Show Me" onclick={handleClick}></lightning-button> &nbsp;
+            <lightning-button variant = "brand" label="Click to Hide Me" onclick={handleClickHide}></lightning-button>
+            <template if:true={isShow}>
+                <h2> Hi, Thanks for the click</h2>
+            </template>
+        </div>
+
+        <!-- toggle button -->
+         <div class = "slds-var-m-around_medium">
+            <lightning-button variant = "brand" label={handleToggleButtonLabel} onclick={handleToggle}></lightning-button>
+            <template if:true ={toggleText} >
+                <h2> Hi, Thanks for the click on Toggle</h2>
+            </template> 
+         </div>
+
+</lightning-card>
+</template>
